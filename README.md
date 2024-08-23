@@ -1,7 +1,3 @@
-Here's a shorter and edgier version of your README:
-
----
-
 # ⚡ Astro Tutorial Blog
 
 Welcome to the chaos. This is my playground for Astro—where I break things so you don’t have to.
