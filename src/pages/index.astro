@@ -1,5 +1,9 @@
 ---
-
+import '../styles/global.css'
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+const pageTitle = "Home Page"
 ---
 
 <html lang="en">
@@ -9,12 +13,11 @@
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Sogu Blog</title>
+		<Header/>
 	</head>
 	<body>
-		<a href="/">Home</a>
-		<a href="/about/">About</a>
-		<a href="/blog/">Blog</a>
-		<h1>Astro</h1>
-		<h2>Lets go make some bullshit</h2>
+		<h1>{pageTitle}</h1>
+		<Footer/>
 	</body>
+	
 </html>
