@@ -1,8 +1,8 @@
 ---
-import '../styles/global.css';
-import Navigation from '../components/Navigation.astro';
-import Header from '../components/Header.astro';
-import BaseLayout from '../layouts/BaseLayout.astro';
+import "../styles/global.css";
+import Navigation from "../components/Navigation.astro";
+import Header from "../components/Header.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 const pageTitle = "About Me";
 
 const identity = {
@@ -13,10 +13,17 @@ const identity = {
     hobbies: ["photography", "drawing", "basketball"],
 };
 
-const skills = [".Net", "CSS", "HTML", "JavaScript", "Astro", "Writing Seconde Brain"];
+const skills = [
+    ".Net",
+    "CSS",
+    "HTML",
+    "JavaScript",
+    "Astro",
+    "Writing Seconde Brain",
+];
 
 const happy = true;
-const finished = false;
+const finished = true;
 const goal = 3;
 
 const skillColor = "navy";
@@ -25,20 +32,39 @@ const textCase = "uppercase";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-    <p>I am working through Astro's introductory tutorial. This is the second page on my website, and it's the first one I built myself!</p>
+    <p>
+        I am working through Astro's introductory tutorial. This is the second
+        page on my website, and it's the first one I built myself!
+    </p>
     <ul>
-        <li>I live in {identity.country} and I work as a {identity.occupation}.</li>
-        {identity.hobbies.length >= 2 &&
-            <li>Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}</li>
+        <li>
+            I live in {identity.country} and I work as a {identity.occupation}.
+        </li>
+        {
+            identity.hobbies.length >= 2 && (
+                <li>
+                    Two of my hobbies are: {identity.hobbies[0]} and{" "}
+                    {identity.hobbies[1]}
+                </li>
+            )
         }
     </ul>
     <p>My Skills</p>
     <ul>
         {skills.map((skill) => <li class="skill">{skill}</li>)}
     </ul>
-    <p>This site will update as I complete more of the tutorial, so keep checking back and see how my journey is going!</p>
-    
+    <p>
+        This site will update as I complete more of the tutorial, so keep
+        checking back and see how my journey is going!
+    </p>
+
     {happy && <p>I am happy to be learning Astro!</p>}
     {finished && <p>I finished this tutorial!</p>}
-    {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
+    {
+        goal === 3 ? (
+            <p>My goal is to finish in 3 days.</p>
+        ) : (
+            <p>My goal is not 3 days.</p>
+        )
+    }
 </BaseLayout>

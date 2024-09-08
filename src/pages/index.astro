@@ -1,11 +1,14 @@
 ---
-import '../styles/global.css';
-import Navigation from '../components/Navigation.astro';
-import Footer from '../components/Footer.astro';
-import Header from '../components/Header.astro';
-import BaseLayout from '../layouts/BaseLayout.astro';
+import "../styles/global.css";
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Greeting from "../components/Greeting";
 const pageTitle = "Home Paged";
 ---
-<BaseLayout pageTitle={pageTitle}>
 
+<BaseLayout pageTitle={pageTitle}>
+    <h2>My awesome blog subtitle</h2>
+    <Greeting client:load messages={["Hej", "Hallo", "Hola", "Habari"]} />
 </BaseLayout>
